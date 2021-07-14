@@ -44,6 +44,20 @@ function countGrade(scores){
 }
 
 
+// anoda soln
+function countGrade(arr){
+          const get = (a, b) =>arr.filter(i => i >= a && i < b).length
+
+          return {
+                    S: get(100,101), 
+                    A: get(90,100), 
+                    B: get(80,90), 
+                    C: get(60,80), 
+                    D: get(0,60), 
+                    X: get(-1,0)
+          } 
+}
+
 console.log( countGrade([50,60,70,80,90,100]))
 
 console.log( countGrade([65,75,,85,85,95,100,100]) )
